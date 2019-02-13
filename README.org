@@ -1,0 +1,52 @@
+#+TITLE: Harmonograph
+#+AUTHOR: Lucas Vieira
+#+EMAIL: lucasvieira@protonmail.com
+
+* Introduction
+
+This project is an attempt to reproduce some Lissajous curves drawn by an
+[[https://en.wikipedia.org/wiki/Harmonograph][harmonograph]].
+
+[[https://en.wikipedia.org/wiki/Lissajous_curve][Lissajous curves]] are drawings of parametric equations which are intimately liked
+with harmony, and therefore with music or even planetary patterns, given proper
+perspective. The following drawing depicts a screenshot of the finished
+application.
+
+[[./extra/screenshot.png]]
+
+The decision to build this small experiment came from a friend of mine, as she
+showed me a certain GIF animation with certain parametric behaviour. As soon as
+I saw the animation, having recently read [[https://www.amazon.com/Quadrivium-Classical-Liberal-Geometry-Cosmology/dp/0802778135][Quadrivium]], I immediately spotted the
+resemblance to Lissajous curves, which encouraged me to build my own, in Common
+Lisp, by using OpenGL and GLFW3.
+
+Below is the GIF animation my friend showed me, which inspired this project.
+
+[[./extra/inspiration.gif]]
+
+* Installation and Usage
+
+Make sure you have [[https://www.quicklisp.org/beta/][Quicklisp]] installed. Clone, copy this repository, or create a
+symlink on your ~local-projects~ directory. Then, load the system and run the
+application:
+
+#+begin_src lisp
+(ql:quickload :harmonograph)
+(harmonograph:run-app)
+#+end_src
+
+Close the window or press ~ESC~ anytime to quit the application.
+
+** Note on performance and requirements
+
+This application was designed to run using OpenGL 2.x, with fixed
+pipeline. Trailing effect was created using the accumulation buffer, which
+impacts performance. This should not be a problem when running such a simple
+application, but it may cause problems on higher resolutions.
+
+* License
+
+This projects is distributed under a 2-clause BSd License. See LICENSE for
+details.
+
+Copyright (c) 2019 Lucas Vieira
