@@ -9,10 +9,10 @@ This project is an attempt to reproduce some Lissajous curves drawn by an
 
 [[https://en.wikipedia.org/wiki/Lissajous_curve][Lissajous curves]] are drawings of parametric equations which are intimately
 related to harmony, and therefore with music or even planetary patterns, given
-proper perspective. The following drawing depicts a screenshot of the finished
-application.
+proper perspective. The following animation depicts a low-fidelity capture of
+the application in execution.
 
-[[./extra/screenshot.png]]
+[[./extra/harmonograph.gif]]
 
 The decision to build this small experiment came from a friend of mine, as she
 showed me a certain GIF animation with certain parametric behaviour. As soon as
@@ -49,7 +49,7 @@ application, but it may cause problems on higher resolutions.
 
 * License
 
-This projects is distributed under a 2-clause BSd License. See LICENSE for
+This projects is distributed under a 2-clause BSD License. See LICENSE for
 details.
 
 Copyright (c) 2019 Lucas Vieira
