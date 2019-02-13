@@ -4,7 +4,7 @@
 
 
 (asdf:defsystem #:harmonograph
-  :description "Shows harmonic patterns like an harmonograph."
+  :description "Shows Lissajous curves like an harmonograph."
   :author "Lucas Vieira <lucasvieira@lisp.com.br>"
   :license  "BSD 2-Clause"
   :version "1.0.0"
