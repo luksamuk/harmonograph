@@ -1,7 +1,12 @@
 ;;;; harmonograph.lisp
 ;;;; Code for harmonograph project.
 ;;;; Copyright (c) 2019 Lucas Vieira <lucasvieira@lisp.com.br>
-
+(eval-when (:compile-toplevel)
+    (declaim (optimize (space 3)
+                       (compilation-speed 0)
+                       (debug 0)
+                       (safety 0)
+                       (speed 3))))
 
 (in-package #:harmonograph)
 
@@ -83,8 +88,8 @@
     (gl:vertex 0 0)
     (loop for x from 0 to 32
        with step = (/ 360 32)
-       do (gl:vertex (* 0.003 (cos (deg->rad (* step x))))
-    		     (* 0.003 (sin (deg->rad (* step x))))))
+       do (gl:vertex (* 0.004 (cos (deg->rad (* step x))))
+    		     (* 0.004 (sin (deg->rad (* step x))))))
     (gl:end)))
 
 (defun deg->rad (angle)

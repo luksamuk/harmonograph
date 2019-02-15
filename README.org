@@ -47,6 +47,40 @@ pipeline. Trailing effect was created using the accumulation buffer, which
 impacts performance. This should not be a problem when running such a simple
 application, but it may cause problems on higher resolutions.
 
+* Compilation
+
+It is possible to compile this application into a standalone executable. To do
+that, you will need SBCL, [[https://www.xach.com/lisp/buildapp/][buildapp]], ~make~ and Quicklisp. This should produce a
+13M binary (notice that it may also need GLFW3 libraries).
+
+All you need to do is run...
+
+#+begin_src bash
+make
+#+end_src
+
+...on the project root directory. This should create a ~bin~ folder containing the
+binary.
+
+There is also a ~folders~ target to create the binary folder, and a ~clean~ target
+which deletes the built binary.
+
+This approach also provides a way to run the application without putting it on
+your ~local-projects~ folder. However, you will still need the dependencies
+described in =harmonograph.asd=.
+
+** Using Roswell
+
+Roswell comes with its own Quicklisp instance bundled. In that case, instead of
+looking for systems on =~/quicklisp/dists=, you may want to provide Roswell's own
+systems path by running the following:
+
+#+begin_src bash
+make DISTS=~/.roswell/lisp/quicklisp/dists
+#+end_src
+
+Or you might want to provide your own dists path.
+
 * License
 
 This projects is distributed under a 2-clause BSD License. See LICENSE for
